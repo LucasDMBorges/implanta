@@ -1,0 +1,113 @@
+<div class="container">
+  <div class="checkbox">
+    <mat-checkbox class="example-margin" [color]="'primary'"></mat-checkbox>
+  </div>
+  <div class="menu">
+    <button
+      mat-icon-button
+      (click)="openMenu()"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div class="anu">
+    <h5>2019</h5>
+    <h4>ANU</h4>
+  </div>
+  <div class="border">
+    <p>NÃO PAGO</p>
+  </div>
+  <div class="data-vencimento">
+    <h6 class="title">30/03/2019</h6>
+    <p class="subtitle">VENCIMENTO</p>
+  </div>
+  <div class="parcelamento">
+    <h6 class="title">Não parcelado</h6>
+    <p class="subtitle">PARCELAMENTO</p>
+  </div>
+  <div class="administrativa">
+    <p class="border">ADMINISTRATIVA</p>
+    <p>DÍVIDA ATIVA</p>
+  </div>
+  <div class="juros">
+    <p>tualização com 2% Multa + 1 % Juros <br /></p>
+    PROCEDIMENTO ATRASO
+  </div>
+  <div class="atualizado">
+    <h3>423,68</h3>
+    <p>ATUALIZADO</p>
+  </div>
+  <div class="acoes">
+    <div class="container-button">
+      <button mat-icon-button (click)="openMenuAcoes()">
+        <mat-icon>more_horiz</mat-icon>
+      </button>
+      <p>Ações</p>
+    </div>
+  </div>
+</div>
+
+<div
+  *ngIf="menu"
+  #menu
+  class="container-menu
+  "
+>
+  <div class="card">
+    <h6 class="title">423,68</h6>
+    <p class="subtitle">ORIGINAL</p>
+  </div>
+  <div class="card">
+    <h6 class="title">423,68</h6>
+    <p class="subtitle">DEVIDO DO PRINCIPAL</p>
+  </div>
+  <div class="card">
+    <h6 class="title">00,00</h6>
+    <p class="subtitle">TOTAL PAGO EFETIVO</p>
+  </div>
+  <div class="card">
+    <h6 class="title">00,00</h6>
+    <p class="subtitle">AMORT.PRINCIPAL</p>
+  </div>
+  <div class="card">
+    <h6 class="title">00,00</h6>
+    <p class="subtitle">AMORT.MARGEM</p>
+  </div>
+  <div class="card">
+    <h6 class="title">00,00</h6>
+    <p class="subtitle">AT.MONETÁRIA</p>
+  </div>
+  <div class="card">
+    <h6 class="title">00,00</h6>
+    <p class="subtitle">MULTA</p>
+  </div>
+  <div class="card">
+    <h6 class="title">00,00</h6>
+    <p class="subtitle">JUROS</p>
+  </div>
+  <div class="card">
+    <h6 class="title">423,68</h6>
+    <p class="subtitle">DESC. PGTO ANTECIPADO</p>
+  </div>
+  <div class="card">
+    <h6 class="title">423,68</h6>
+    <p class="subtitle">VALOR ATUALIZADO</p>
+  </div>
+</div>
+
+<div #menuAcoes class="menuAcoes" *ngIf="menuAcoes">
+  <div class="card-simbolo">
+    <mat-icon>schedule</mat-icon>
+    <span>HISTÓRICO</span>
+  </div>
+  <div class="border card">
+    <p>Situações do débito</p>
+  </div>
+  <div class="border card">
+    <p>Pagamentos</p>
+  </div>
+  <div class="border card">
+    <p>Protesto</p>
+  </div>
+</div>
